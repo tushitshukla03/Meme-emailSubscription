@@ -1,1 +1,0 @@
-# News API serverless functions
