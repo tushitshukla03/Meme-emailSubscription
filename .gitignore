@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+node_modules/
+functions/build/
+
+# ignore environment configuration files
+.env.local
+.env.production
