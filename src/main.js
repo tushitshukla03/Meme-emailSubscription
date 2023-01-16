@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const cron = require("node-cron");
+
 
 const dotenv = require('dotenv'); 
 
