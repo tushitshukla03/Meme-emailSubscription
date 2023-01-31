@@ -11,6 +11,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "mongodb": "^3.7.0",
+    "fs": "^0.0.1-security",
     "nodemailer": "^6.8.0"
     
   },
