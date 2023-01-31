@@ -10,6 +10,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
+    "axios": "^1.2.6",
     "mongodb": "^3.7.0",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.3.0",
