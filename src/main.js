@@ -10,7 +10,7 @@ const mailOPtions = {
   from: process.env.MAIL_USER_EMAIL,
   to: process.env.MAIL_TO,
   subject: "Daily Top News..",
-  html: fs.readFileSync("./meme.html", "utf-8")
+  html: fs.readFileSync("../src/meme.html", "utf-8")
 
 }
 
