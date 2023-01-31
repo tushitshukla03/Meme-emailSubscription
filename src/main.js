@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const meme = require("./meme");
+const fs = require("fs");
 
 
 const dotenv = require('dotenv'); 
@@ -10,7 +10,7 @@ const mailOPtions = {
   from: process.env.MAIL_USER_EMAIL,
   to: process.env.MAIL_TO,
   subject: "Daily Top News..",
-  html: meme
+  html: fs.readFileSync("./meme.html", "utf-8")
 
 }
 
