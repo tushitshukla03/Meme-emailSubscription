@@ -1,0 +1,42 @@
+name: Daily News
+
+
+on:
+  schedule: 
+  - cron: "0 1 * * *"
+  workflow_dispatch:
+  
+  
+env:
+  MAIL_USER_EMAIL: ${{secrets.MAIL_USER_EMAIL}}
+  MAIL_USER_PASSWORD: ${{secrets.MAIL_USER_PASSWORD}}
+  MAIL_TO: ${{secrets.MAIL_TO}}
+
+
+
+
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    strategy:
+     matrix:
+        node-version: [14.x]
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    
+    - name: Use Node.js ${{matrix.node-version}}
+      uses: actions/setup-node@v2
+      with:
+         node-version: ${{matrix.node-version}}
+       
+        
+      
+    - run: yarn install 
+    - run: node src/main.js
+
+  
+      
+      

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="h1">Top Meme</h1>
+        <img id="img" src="" />
+    </div>
+
+    <script>
+        const url = "https://meme-api.com/gimme/dankmemes";
+        const img = document.querySelector("#img");
+        const h1 = document.querySelector("#h1");
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                img.src = data.url;
+                h1.innerText = data.title;
+            })
+    </script>
+</body>
+
+</html>
